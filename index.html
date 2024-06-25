@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i id="logoinstagram" class="fa-brands fa-instagram"></i>
+        <p class="tituloinstagram">Instagram</p>
+      </a>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create a new post
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Caption:
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Add the caption of your post here"
+                id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Add the caption of your post here</label>
+            </div>
+            <div class="botonesheader">
+              <button class="botoncamara"><i class="bi bi-camera"></i></button>
+              <button class="botonlocalizacion"><i class="bi bi-geo-alt"></i></button>
+            </div>
+            <div class="modal-footer d-flex justify-content-start">
+              <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="publish" type="button" class="btn btn-success">Publish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-gear-wide-connected"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Pestañas para mostrar el contenido -->
+  <ul class="nav nav-tabs d-flex justify-content-center mt-3" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true">
+        <i class="bi bi-grid-fill"></i>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+        <i class="bi bi-square-fill"></i>
+      </button>
+    </li>
+  </ul>
+
+  <!-- Contenido de las pestañas -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Imágenes para el modo Grid -->
+          <div class="col">
+            <img src="/imagenes/fotoperro.jpeg" class="img-fluid rounded" alt="Foto de Perro">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotofutbol.jpeg" class="img-fluid rounded" alt="Foto de Fútbol">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotopaisaje.jpeg" class="img-fluid rounded" alt="Foto de Paisaje">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotoamigos.jpeg" class="img-fluid rounded" alt="Foto de Amigos">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotociudad.jpeg" class="img-fluid rounded" alt="Foto de ciudad">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotoretrato.jpeg" class="img-fluid rounded" alt="Foto de Retrato">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotocomida.jpeg" class="img-fluid rounded" alt="Foto de Comida">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fototemplo.jpeg" class="img-fluid rounded" alt="Foto de Templo">
+          </div>
+          <div class="col">
+            <img src="/imagenes/fotorinocerontes.jpeg" class="img-fluid rounded" alt="Foto de Rinocerontes">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="container mt-3">
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>El Perro Fantástico</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">25/06</span>
+          </div>
+          <img src="/imagenes/fotoperro.jpeg" class="card-img-top" alt="Foto de Perro">
+          <div class="card-body">
+            <p class="card-text"><strong>200 Likes</strong></p>
+            <p>Max es un perro extraordinario conocido por su inteligencia y valentía. Con su pelaje dorado y ojos
+              brillantes, es el héroe del vecindario, siempre dispuesto a ayudar y proteger a todos con su lealtad
+              inquebrantable.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>El Balón de Fútbol Perfecto</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">25/06</span>
+          </div>
+          <img src="/imagenes/fotofutbol.jpeg" class="card-img-top" alt="Foto de Balón de Fútbol">
+          <div class="card-body">
+            <p class="card-text"><strong>18.752 Likes</strong></p>
+            <p>Este balón de fútbol, fabricado con materiales de alta calidad, ofrece un control excepcional y una
+              durabilidad impresionante. Su diseño aerodinámico y su superficie texturizada aseguran un rendimiento
+              óptimo en cada partido, convirtiéndolo en la elección ideal para jugadores de todos los niveles.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>El Paisaje Verde de Ensueño</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">26/06</span>
+          </div>
+          <img src="/imagenes/fotopaisaje.jpeg" class="card-img-top" alt="Foto de Paisaje Verde">
+          <div class="card-body">
+            <p class="card-text"><strong>8.341 Likes</strong></p>
+            <p>Un extenso paisaje verde se despliega ante tus ojos, lleno de praderas exuberantes y colinas suaves. Los
+              árboles majestuosos ofrecen sombra refrescante, mientras un arroyo serpenteante añade un toque de
+              serenidad con su murmullo constante. Este paraíso natural es el lugar perfecto para escapar del bullicio
+              de la ciudad y sumergirse en la tranquilidad de la naturaleza.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>Momentos con Amigos</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">25/06</span>
+          </div>
+          <img src="/imagenes/fotoamigos.jpeg" class="card-img-top" alt="Foto de Balón de Fútbol">
+          <div class="card-body">
+            <p class="card-text"><strong>18.752 Likes</strong></p>
+            <p> Cada reunión con mis amigos es un cúmulo de risas contagiosas, historias inolvidables y complicidad
+              inquebrantable. Juntos, creamos recuerdos que perduran en el tiempo, compartiendo aventuras que fortalecen
+              nuestros lazos y enriquecen nuestras vidas.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>Foto de Ciudad Nocturna</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">27/06</span>
+          </div>
+          <img src="/imagenes/fotociudad.jpeg" class="card-img-top" alt="Foto de Ciudad Nocturna">
+          <div class="card-body">
+            <p class="card-text"><strong>6.912 Likes</strong></p>
+            <p>La ciudad cobra vida cuando cae la noche, sus luces brillan como estrellas en el horizonte urbano. Un
+              ambiente vibrante envuelve las calles, lleno de energía y misterio, invitando a explorar sus rincones
+              ocultos y descubrir nuevas historias bajo la luna.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>Retrato de noche</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">28/06</span>
+          </div>
+          <img src="/imagenes/fotoretrato.jpeg" class="card-img-top" alt="Retrato en Blanco y Negro">
+          <div class="card-body">
+            <p class="card-text"><strong>3.421 Likes</strong></p>
+            <p>La fotografía captura la esencia del momento con elegancia y nostalgia. Cada detalle se convierte en un
+              elemento de contraste y profundidad, revelando emociones y expresiones que perduran en la memoria,
+              congelando el instante en el tiempo.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>Delicia Culinaria</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">29/06</span>
+          </div>
+          <img src="/imagenes/fotocomida.jpeg" class="card-img-top" alt="Delicia Culinaria">
+          <div class="card-body">
+            <p class="card-text"><strong>12.543 Likes</strong></p>
+            <p>Una obra maestra culinaria que despierta los sentidos con su aroma irresistible y su presentación
+              exquisita. Cada bocado es un viaje de sabores, combinando ingredientes frescos y técnicas creativas para
+              deleitar el paladar y satisfacer los más exigentes deseos gastronómicos.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>El Templo Misterioso</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">30/06</span>
+          </div>
+          <img src="/imagenes/fototemplo.jpeg" class="card-img-top" alt="Foto de Templo">
+          <div class="card-body">
+            <p class="card-text"><strong>9.876 Likes</strong></p>
+            <p>Este templo antiguo esconde historias y misterios en cada piedra y cada columna tallada. Su arquitectura
+              imponente y su atmósfera tranquila invitan a los visitantes a reflexionar y conectar con la espiritualidad
+              mientras exploran sus pasillos y admirar sus detalles únicos.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 40rem; margin: auto;">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <h4>Los Rinocerontes Majestuosos</h4>
+            <span class="text-muted" style="font-size: 0.8rem;">01/07</span>
+          </div>
+          <img src="/imagenes/fotorinocerontes.jpeg" class="card-img-top" alt="Foto de Rinocerontes">
+          <div class="card-body">
+            <p class="card-text"><strong>7.532 Likes</strong></p>
+            <p>Los rinocerontes, con su imponente presencia y cuernos poderosos, son los guardianes de la sabana. Su
+              piel rugosa refleja la fuerza y la resistencia que les permite sobrevivir en su hábitat natural. Estos
+              majestuosos animales son un recordatorio de la belleza y la diversidad de la vida salvaje en nuestro
+              planeta.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2a04b1758b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

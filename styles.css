@@ -1,0 +1,66 @@
+#logoinstagram {
+    font-size: 30px;
+}
+
+.tituloinstagram {
+    margin-top: -35px;
+    margin-left: 30px;
+}
+
+.btn-success {
+    margin-left: 1480px;
+}
+
+.form-floating {
+    margin: 20px auto;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.form-floating textarea.form-control {
+    height: 120px; 
+    width: 270%; 
+    height: 50px;
+    resize: vertical;
+    font-size: 14px;
+    margin-top: -30px;
+}
+
+.form-floating label {
+    font-size: 14px; 
+    margin-top: 0; 
+    margin-top: -30px;
+}
+
+.botoncamara {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #495057;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.botonlocalizacion {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #495057;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+#close {
+    margin-left: auto;
+
+}
+
+#publish {
+    margin-left: 10px;
+}
+
